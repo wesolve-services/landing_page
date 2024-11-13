@@ -3,8 +3,40 @@ export async function initTestimonialCarousel() {
   if (!testimonialContainer) return;
 
   try {
-    const response = await fetch('/data/testimonials.json');
-    const data = await response.json();
+    //const response = await fetch('/data/testimonials.json');
+    //const data = await response.json();
+    const data = {
+  "testimonials": [
+    {
+      "id": 1,
+      "quote": "WeSolve helped me complete my final year project with the latest technologies. Their guidance was invaluable!",
+      "author": "Sarah Johnson",
+      "role": "Computer Science Graduate",
+      "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100"
+    },
+    {
+      "id": 2,
+      "quote": "The mentorship and support from WeSolve team made our project journey smooth and learning-focused.",
+      "author": "Michael Chen",
+      "role": "IT Engineering Student",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100"
+    },
+    {
+      "id": 3,
+      "quote": "Their expertise in cutting-edge technologies helped us create an innovative project that stood out.",
+      "author": "Emma Davis",
+      "role": "Software Engineering Graduate",
+      "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100"
+    },
+    {
+      "id": 4,
+      "quote": "The documentation support and project guidance were exceptional. Highly recommended!",
+      "author": "Alex Thompson",
+      "role": "Computer Engineering Student",
+      "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100"
+    }
+  ]
+}
     const testimonials = data.testimonials;
     let currentIndex = 0;
 
